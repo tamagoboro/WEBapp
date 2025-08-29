@@ -11,8 +11,8 @@ img = Image.open('ragi.png')
 draw = ImageDraw.Draw(img)
 font = ImageFont.truetype('YDWaosagi.otf', 40)
 
-draw.text((50,50),texttitle,fill=(255,0,0),font=font)
-draw.text((50,120),f"ラジオネーム:{textname}",fill=(255,0,0),font=font)
+draw.text((1024,750),texttitle,fill=(255,0,0),font=font)
+draw.text((1800,750),f"ラジオネーム:{textname}",fill=(255,0,0),font=font)
 
 # 表示
 st.image(img, caption="文字を書き込んだ画像")
