@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image,ImageDraw,ImageFont
 import textwrap
+import io
 
 st.caption('ちゃば×らじの質問画像生成アプリ')
 
@@ -21,6 +22,10 @@ draw.text((1024,950),f"ラジオネーム:{textname}",fill=(0,0,0),font=font,anc
 st.image(img, caption="文字を書き込んだ画像")
 
 # 保存ボタン
+# 保存ボタン
 if st.button("保存する"):
-    img.save(f"output.jpg")
-    st.success(f"保存しました！（output{textname}.jpg）")
+    buf = io.BytesIO()
+    if img.mode == "RGBA":
+        img = img.convert("RGB")
+    img.save(buf, format="JPEG")
+    st.download_button("画像をダウンロード", data=buf.getvalue(), file_name="output.jpg", mime="image/jpeg")
