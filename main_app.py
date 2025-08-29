@@ -1,9 +1,10 @@
 import streamlit as st
 from PIL import Image
+import json
 
-st.title('mainアプリ')
-st.caption('これはテストアプリです')
+st.title('星空茶会専用アプリ')
+st.caption('星空茶会の確認・共有するためのアプリです。')
 
-image = Image.open('1546.png')
-st.image(image,width=200)
+st.caption('メンバーの進捗状況確認アプリ-制作中')
+st.caption('メンバーの得意情報確認アプリ-制作中')
 

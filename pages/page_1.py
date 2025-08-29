@@ -1,8 +1,8 @@
 import streamlit as st
 
 code = '''
-print('こんにちは')
+制作中です。
 
 '''
-st.code(code,language='python')
+st.code(code)
 
