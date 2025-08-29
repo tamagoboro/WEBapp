@@ -4,15 +4,15 @@ from PIL import Image,ImageDraw,ImageFont
 
 st.caption('ちゃば×らじの質問画像生成アプリ')
 
-texttitle = st.text_input('質問を入力してください:','',width=20)
-textname = st.text_input('ラジオネームを入力してください:','',width=20)
+texttitle = st.text_input('質問を入力してください:','',width=300)
+textname = st.text_input('ラジオネームを入力してください:','',width=300)
 
 img = Image.open('ragi.png')
 draw = ImageDraw.Draw(img)
-font = ImageFont.truetype('meiryo.ttc',40)
+font = ImageFont.truetype('fonts/NotoSansJP-Regular.ttf', 40)
 
 draw.text((50,50),texttitle,fill=(255,0,0),font=font)
-draw.text((80,50),texttitle,fill=(255,0,0),font=font)
+draw.text((50,120),f"ラジオネーム:{textname}",fill=(255,0,0),font=font)
 
 # 表示
 st.image(img, caption="文字を書き込んだ画像")
