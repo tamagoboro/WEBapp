@@ -1,11 +1,12 @@
 import streamlit as st
 from PIL import Image,ImageDraw,ImageFont
-
+import textwrap
 
 st.caption('ちゃば×らじの質問画像生成アプリ')
 
 texttitle = st.text_input('質問を入力してください:','',width=300)
-wrapped_text = "\n".join(texttitle.wrap(texttitle, 20))
+
+wrapped_text = "\n".join(textwrap.wrap(texttitle, 20))
 textname = st.text_input('ラジオネームを入力してください:','',width=300)
 
 img = Image.open('ragi.png')
