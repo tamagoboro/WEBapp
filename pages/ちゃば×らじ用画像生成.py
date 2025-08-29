@@ -9,7 +9,7 @@ textname = st.text_input('ラジオネームを入力してください:','',wid
 
 img = Image.open('ragi.png')
 draw = ImageDraw.Draw(img)
-font = ImageFont.truetype('fonts/NotoSansJP-Regular.ttf', 40)
+font = ImageFont.truetype('YDWaosagi.otf', 40)
 
 draw.text((50,50),texttitle,fill=(255,0,0),font=font)
 draw.text((50,120),f"ラジオネーム:{textname}",fill=(255,0,0),font=font)
