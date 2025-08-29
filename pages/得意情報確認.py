@@ -1,4 +1,4 @@
-import statistics as st
+import streamlit as st
 
 code = '''
 制作中です。
