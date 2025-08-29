@@ -22,5 +22,5 @@ st.image(img, caption="文字を書き込んだ画像")
 
 # 保存ボタン
 if st.button("保存する"):
-    img.save(f"output{textname}.jpg")
+    img.save(f"output.jpg")
     st.success(f"保存しました！（output{textname}.jpg）")
